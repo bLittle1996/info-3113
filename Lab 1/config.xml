@@ -9,7 +9,7 @@
 		<description>
 This is a simple application that triggers the notification button		</description>
 		<author href="https://github.com/bLittle1996/info-3113" email="b.little1996@gmail.com">
-Ben Littleton & Nick Hough
+Ben Littleton and Nick Hough
 		</author>
 		<preference name='phonegap-version' value='cli-6.3.0' />
 		<preference name="orientation" value="default" />
