@@ -1,55 +1,36 @@
-		<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		xmlns:android = "http://schemas.android.com/apk/res/android"
-		id        = ""
+	xmlns:android="http://schemas.android.com/apk/res/android"
+		id        = "com.fanshawe.Notification"
 		versionCode="1"
-		version   = "1">
-		<name>Lab 1</name>
-		<description>Notification app	</description>
-		<author href="" email="">		</author>
-		<feature name="http://api.phonegap.com/1.0/battery" />
-		<feature name="http://api.phonegap.com/1.0/camera" />
-		<feature name="http://api.phonegap.com/1.0/contacts" />
-		<feature name="http://api.phonegap.com/1.0/file" />
-		<feature name="http://api.phonegap.com/1.0/geolocation" />
-		<feature name="http://api.phonegap.com/1.0/media" />
-		<feature name="http://api.phonegap.com/1.0/network" />
-		<feature name="http://api.phonegap.com/1.0/notification" />
-		<preference name="phonegap-version" value="cli-6.3.0" />
-		<preference name="android-build-tool" value="gradle" />
+		version   = "1.0">
+		<name>Notification Lab</name>
+		<description>
+This is a simple application that triggers the notification button		</description>
+		<author href="https://github.com/bLittle1996/info-3113" email="b.little1996@gmail.com">
+Ben Littleton & Nick Hough
+		</author>
+		<preference name='phonegap-version' value='cli-6.3.0' />
 		<preference name="orientation" value="default" />
-		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="universal" />
-		<preference name="webviewbounce" value="true" />
-		<preference name="prerendered-icon" value="false" />
+		<preference name="fullscreen" value="false" />
+		<preference name="webviewbounce" value="false" />
+		<preference name="prerendered-icon" value="true" />
 		<preference name="stay-in-webview" value="true" />
 		<preference name="ios-statusbarstyle" value="default" />
 		<preference name="detect-data-types" value="true" />
-		<preference name="exit-on-suspend" value="true" />
-		<preference name="show-splash-screen-spinner" value="true" />
-		<preference name="auto-hide-splash-screen" value="true" />
-		<preference name="FadeSplashScreen " value="true" />
-		<preference name="EnableViewportScale" value="false" />
-		<preference name="MediaPlaybackRequiresUserAction" value="false" />
-		<preference name="AllowInlineMediaPlayback" value="true" />
-		<preference name="BackupWebStorage" value="none" />
-		<preference name="TopActivityIndicator" value="white" />
-		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
-		<preference name="KeyboardShrinksView " value="true" />
-		<preference name="HideKeyboardFormAccessoryBar" value="true" />
-		<preference name="SuppressesIncrementalRendering" value="false" />
-		<preference name="windows-identity-name" value="" />
-		<preference name="android-minSdkVersion" value="16" />
-		<preference name="android-targetSdkVersion" value="22" />
-		<preference name="android-maxSdkVersion" value="23" />
-		<preference name="android-installLocation" value="auto" />
-		<preference name="SplashScreenDelay" value="2000" />
-		<preference name="ErrorUrl" value="null" />
-		<preference name="BackgroundColor" value="0x000000" />
-		<preference name="DisallowOverscroll" value="true" />
-		<preference name="LoadingDialog" value="," />
-		<preference name="LoadUrlTimeoutValue" value="null" />
-		<platform name="android">
-		</platform>
-		</widget>
+		<preference name="exit-on-suspend" value="false" />
+		<preference name="show-splash-screen-spinner" value="false" />
+		<preference name="auto-hide-splash-screen" value="false" />
+		<preference name="disable-cursor" value="false" />
+		<preference name="android-minSdkVersion" value="7" />
+		<preference name="android-installLocation" value="internalOnly" />
+		<preference name="splash-screen-duration" value="5000" />
+		<preference name="load-url-timeout" value="20000" />
+    <gap:config-file platform="android" parent="/manifest">
+         <application android:debuggable="true" />
+    </gap:config-file>
+    	<gap:platform name="android" />
+		<gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+	</widget>
