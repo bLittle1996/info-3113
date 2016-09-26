@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+		id        = "com.fanshawe.Notification"
+		versionCode="1"
+		version   = "1.0">
+		<name>Notification Lab</name>
+		<description>
+This is a simple application that triggers the notification button		</description>
+		<author href="https://github.com/bLittle1996/info-3113" email="b.little1996@gmail.com">
+Ben Littleton and Nick Hough
+		</author>
+		<preference name='phonegap-version' value='cli-6.3.0' />
+		<preference name="orientation" value="default" />
+		<preference name="target-device" value="universal" />
+		<preference name="fullscreen" value="false" />
+		<preference name="webviewbounce" value="false" />
+		<preference name="prerendered-icon" value="true" />
+		<preference name="stay-in-webview" value="true" />
+		<preference name="ios-statusbarstyle" value="default" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="exit-on-suspend" value="false" />
+		<preference name="show-splash-screen-spinner" value="false" />
+		<preference name="auto-hide-splash-screen" value="false" />
+		<preference name="disable-cursor" value="false" />
+		<preference name="android-minSdkVersion" value="7" />
+		<preference name="android-installLocation" value="internalOnly" />
+		<preference name="splash-screen-duration" value="5000" />
+		<preference name="load-url-timeout" value="20000" />
+    <gap:config-file platform="android" parent="/manifest">
+         <application android:debuggable="true" />
+    </gap:config-file>
+    	<gap:platform name="android" />
+		<gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+	</widget>

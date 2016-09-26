@@ -5,11 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Lab One - Notifications and Stuff</title>
-  <script src='script.js'></script>
 </head>
-<body style='height: 100hv; width: 100%;'>
-  <div style='display: flex; justify-content: center; align-items: center;' id="content">
-    <a href="#" onclick="showConfirmClick();">Show confirmation box</a>
+<body>
+  <div>
+    <a href="#" onclick="showConfirmClick(); return false;">Show confirmation box</a>
   </div>
 </body>
+<script src='cordova.js'></script>
+<script type='text/javascript'>
+  document.addEventListener('deviceready', onDeviceReady, false)
+
+  function showConfirmClick(buttonIndex) {
+    navigator.notification.confirm(
+      'You are the winner!',
+      (buttonIndex) => { alert('You clicked ' + buttonIndex) },
+      'Game Over',
+      ['Restart', 'Exit']
+    )
+  }
+</script>
 </html>
